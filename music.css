@@ -1,0 +1,352 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+main,html{
+    padding: 0%;
+    margin: 0%;
+}
+header h3{
+    margin: 0% 25% 0% auto;
+    font-size: var(--font);
+}
+header h2{
+    margin: 2% 40% 2% auto;
+    font-size: var(--font);
+}
+header h1{
+    margin: 0% 10% 0% auto;
+    font-size: var(--font);
+}
+
+header{
+    text-align: center;
+    text-transform: capitalize;
+    margin:2% auto 3% auto;
+    color: #795d5d;
+    
+    --font: 40px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+main div{
+    min-width: 200px;
+    max-width: 350px;
+    margin-top: 2%;
+    height: fit-content;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+div img{
+    width: 70%;
+    aspect-ratio: 5/4;
+    justify-self: center;
+    
+}
+
+main div h1{
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #795d5d;
+}
+
+main div p{
+    text-align: center;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button{
+    width: 30%;
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-bottom: 15%;
+    background-color: white;
+    color: #5F5050;
+    border-color: #5a4c4c;
+
+    font-size: 1.2em;
+    font-weight: bolder;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* stylings for the portfolio */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: #5F5050;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+    padding: auto 20px;
+    font-size: 1.6em;
+    
+}
+
+section audio, footer div{
+    width: 45%;
+    margin-bottom: 5%;
+
+}
+
+
+
+/* stylings for the contact page */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+        
+}
+
+footer div.media{
+    display: flex;
+    border: 3px solid black;
+    border-radius: 15px;
+
+    min-width: fit-content !important;
+    transition: transform .5s ;
+}
+
+footer div.media:hover{
+    transform: scale(1.1);
+}
+
+footer div.media img{
+    width: 30%;
+    aspect-ratio: 1/1;
+    margin-left: 2%;
+    transition: transform .5s ;
+    transform: scale(0.8);
+
+}
+
+footer div.media img:hover{
+    transform: rotate(20deg);
+}
+
+
+footer div.media div.media-name {
+    align-self: center;
+    width: 75%;
+    margin-left: 2%;
+    font-size: .7rem;
+}
+
+footer div.media div.media-name h2{
+    font-size: 1.8em;
+    letter-spacing: 0.2em;
+}
+
+section:last-of-type {
+    width: 100%;
+    aspect-ratio: 9/6;
+    background-image: url('./svg/blob-scene-haikei.svg');
+    /* background-image: linear-gradient(to right bottom, #281919,#201515,#180f11,#0f0809,#000000); */
+}
+
+section form{
+    width: 100%;
+    margin: auto;
+}
+
+section div#form{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin: auto 15%;
+}
+
+section div#form div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section form div div input,textarea{
+    background-color: #281919;
+    color: white;
+    width: 95%;
+    border-radius: 0px 10px;
+    /* border-start-end-radius: 40%; */
+    font-size: 1.5em;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    margin: 0%;
+}
+
+section div input{
+    height: 60px;
+}
+
+section div textarea{
+    height: 65%;
+}
+
+section div h2{
+    text-transform: uppercase;
+    margin-top: 3%;
+    color: rgb(34, 21, 5);
+}
+
+button:last-of-type{
+    margin-top: 2%; 
+    margin-bottom: 3%;
+}
+
+#mb{
+    margin-bottom: 50%;
+}
+
+.mb-0{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+@media (max-width:550px){
+    button{
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 8%;
+    }
+    button::before{
+        width: 70%;
+    }
+
+    section audio{
+        width: 90%;
+    }
+
+    footer div.media div.media-name h2{
+        letter-spacing: initial;
+    }
+
+    section form div#form{
+        flex-direction: column;
+    }
+
+    #mb{
+        margin-bottom: initial;
+    }
+}
+
+@media (min-width: 1300px){
+    section audio{
+        width: 32%;
+    }
+    button:last-of-type{
+        transform: translatey(-70%);
+    }
+    h1{
+        padding-bottom: 0px !important;
+        margin-bottom: 0%;
+    }
+}
+
+
+
+
+/* for the waves divider */
+.waves-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.waves-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.waves-divider .shape-fill {
+    fill: #5F5050;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .waves-divider svg {
+        width: calc(120% + 1.3px);
+        height: 98px;
+    }
+}
+
+
+
+/* for the second wave */
+.spacer,.last-wave{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background: url( "svg/layered-waves-haikei.svg");
+
+}
+section:last-of-type,.spacer,.last-wave{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* //for third wave */
+.last-wave{
+    transform: rotate(180deg);
+}
+
+
+/* for the button animation */
+button::before{
+    content: '';
+    position: absolute;
+    
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+
+}
+
+button:hover{
+    transition: transform 0.8s;
+    transform: scale(1.1);
+    
+}
+
+
+button:focus::before{
+    animation: btn-animation .8s ease-out;
+}
+
+@keyframes btn-animation{
+    0%{
+        width: 0px;
+        background-color: rgba(255, 0, 0, 0.8);
+    }
+}
+
